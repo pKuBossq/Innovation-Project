@@ -6,7 +6,16 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>
-  <fieldPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Shelter__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Adoption__c.Amount__c</field>
         <readable>true</readable>
@@ -445,7 +454,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-
         <editable>false</editable>
         <field>Animal__c.Age__c</field>
         <readable>false</readable>
@@ -506,8 +514,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Adoption__c</object>
         <object>Animal__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Adoption__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <userLicense>Salesforce</userLicense>
