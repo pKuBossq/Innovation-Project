@@ -4,4 +4,15 @@
     <active>true</active>
     <description>Real adoption</description>
     <label>Real</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>
