@@ -6,7 +6,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>
-    <fieldPermissions>
+   <fieldPermissions>
         <editable>false</editable>
         <field>Animal__c.Age__c</field>
         <readable>false</readable>
@@ -67,6 +67,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>Adoption__c</object>
         <object>Animal__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
