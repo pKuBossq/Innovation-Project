@@ -152,14 +152,14 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Animal</label>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Shelter</label>
     <nameField>
-        <label>Animal Name</label>
+        <label>Shelter Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Animals</pluralLabel>
+    <pluralLabel>Shelters</pluralLabel>
     <searchLayouts></searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
