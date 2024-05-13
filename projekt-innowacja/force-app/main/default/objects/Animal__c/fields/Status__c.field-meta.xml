@@ -3,9 +3,37 @@
     <fullName>Status__c</fullName>
     <externalId>false</externalId>
     <label>Status</label>
-    <length>20</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Available for adoption</fullName>
+                <default>false</default>
+                <label>Available for adoption</label>
+            </value>
+            <value>
+                <fullName>Undergoing medical treatment</fullName>
+                <default>false</default>
+                <label>Undergoing medical treatment</label>
+            </value>
+            <value>
+                <fullName>Waiting for behavioral evaluation</fullName>
+                <default>false</default>
+                <label>Waiting for behavioral evaluation</label>
+            </value>
+            <value>
+                <fullName>Will be leaving the shelter soon</fullName>
+                <default>false</default>
+                <label>Will be leaving the shelter soon</label>
+            </value>
+            <value>
+                <fullName>Under constant care</fullName>
+                <default>false</default>
+                <label>Under constant care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
 </CustomField>
