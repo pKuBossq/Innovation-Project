@@ -26,6 +26,7 @@
 		<members>Animal__c.Photo__c</members>
 		<members>Animal__c.Sex__c</members>
 		<members>Animal__c.Shelter__c</members>
+		<members>Animal__c.Show_image__c</members>
 		<members>Animal__c.Special_needs__c</members>
 		<members>Animal__c.Status__c</members>
 		<members>Animal__c.Weight__c</members>

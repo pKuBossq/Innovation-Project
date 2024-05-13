@@ -3,29 +3,9 @@
     <fullName>Special_needs__c</fullName>
     <externalId>false</externalId>
     <label>Special needs</label>
+    <length>30</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
-    <type>MultiselectPicklist</type>
-    <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>need1</fullName>
-                <default>false</default>
-                <label>need1</label>
-            </value>
-            <value>
-                <fullName>need2</fullName>
-                <default>false</default>
-                <label>need2</label>
-            </value>
-            <value>
-                <fullName>need3</fullName>
-                <default>false</default>
-                <label>need3</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
-    <visibleLines>4</visibleLines>
+    <type>Text</type>
+    <unique>false</unique>
 </CustomField>
