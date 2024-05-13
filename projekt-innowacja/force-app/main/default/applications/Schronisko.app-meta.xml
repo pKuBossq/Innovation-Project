@@ -12,5 +12,4 @@
     <label>Schronisko</label>
     <navType>Standard</navType>
     <uiType>Lightning</uiType>
-    <utilityBar>Schronisko_UtilityBar</utilityBar>
 </CustomApplication>
