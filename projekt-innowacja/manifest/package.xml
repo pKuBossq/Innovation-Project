@@ -50,6 +50,20 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
+		<members>Adoption__c</members>
+		<members>Animal__c</members>
+		<members>Lost_Animal_Report__c</members>
+		<members>Shelter__c</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Adoption__c.All</members>
+		<members>Animal__c.All</members>
+		<members>Lost_Animal_Report__c.All</members>
+		<members>Shelter__c.All</members>
+		<name>ListView</name>
+	</types>
+	<types>
 		<members>Account-Account Layout</members>
 		<members>Adoption__c-Adoption Layout</members>
 		<members>Adoption__c-Virtual_Adoption_Layout</members>
