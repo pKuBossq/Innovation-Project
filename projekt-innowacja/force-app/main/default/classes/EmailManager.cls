@@ -1,12 +1,6 @@
 public with sharing class EmailManager {
-    public static void sendMail(String address, String subject, String body) {
-        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-        String[] toAddresses = new String[] {address};
-        mail.setToAddresses(toAddresses);
-        mail.setSubject(subject);
-        mail.setPlainTextBody(body);
-        Messaging.SendEmailResult[] results = Messaging.sendEmail(
-                                  new Messaging.SingleEmailMessage[] { mail });
+    public static void sendMail(List<Messaging.SingleEmailMessage> mails) {
+        Messaging.SendEmailResult[] results = Messaging.sendEmail(mails);
         inspectResults(results);
     }
     private static Boolean inspectResults(Messaging.SendEmailResult[] results) {
