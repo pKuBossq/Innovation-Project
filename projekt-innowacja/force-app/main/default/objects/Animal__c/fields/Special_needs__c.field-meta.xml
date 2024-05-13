@@ -3,7 +3,7 @@
     <fullName>Special_needs__c</fullName>
     <externalId>false</externalId>
     <label>Special needs</label>
-    <length>30</length>
+    <length>200</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

@@ -10,29 +10,29 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Dostępny do adopcji</fullName>
+                <fullName>Available for adoption</fullName>
                 <default>false</default>
-                <label>Dostępny do adopcji</label>
+                <label>Available for adoption</label>
             </value>
             <value>
-                <fullName>W trakcie leczenia medycznego</fullName>
+                <fullName>Undergoing medical treatment</fullName>
                 <default>false</default>
-                <label>W trakcie leczenia medycznego</label>
+                <label>Undergoing medical treatment</label>
             </value>
             <value>
-                <fullName>Czeka na ocenę behawioralną</fullName>
+                <fullName>Waiting for behavioral evaluation</fullName>
                 <default>false</default>
-                <label>Czeka na ocenę behawioralną</label>
+                <label>Waiting for behavioral evaluation</label>
             </value>
             <value>
-                <fullName>Wkrótce opuści schronisko</fullName>
+                <fullName>Will be leaving the shelter soon</fullName>
                 <default>false</default>
-                <label>Wkrótce opuści schronisko</label>
+                <label>Will be leaving the shelter soon</label>
             </value>
             <value>
-                <fullName>Pod opieką stałą</fullName>
+                <fullName>Under constant care</fullName>
                 <default>false</default>
-                <label>Pod opieką stałą</label>
+                <label>Under constant care</label>
             </value>
         </valueSetDefinition>
     </valueSet>
