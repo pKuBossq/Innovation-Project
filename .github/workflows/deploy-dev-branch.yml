@@ -36,7 +36,7 @@ jobs:
 
       # Authenticate to org
       - name: 'Authenticate to Integration Org'
-        run: sfdx auth:sfdxurl:store -f ./SFDX_AUTH_URL.txt -s -a integration
+        run: sfdx auth:sfdxurl:store -f ./SFDX_AUTH_URL.txt -s -a IntegratedOrg
 
       - name: "Deploy the entire branch"
         run: sfdx force:source:deploy -p "./force-app"
