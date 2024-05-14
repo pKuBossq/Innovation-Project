@@ -5,7 +5,7 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>AdoptionStatusChangeTrigger</members>
+		<members>*</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -35,6 +35,11 @@
 		<members>Lost_Animal_Report__c.Date_Lost__c</members>
 		<members>Lost_Animal_Report__c.Description__c</members>
 		<members>Lost_Animal_Report__c.Location__c</members>
+		<members>Person__c.Email__c</members>
+		<members>Person__c.Name__c</members>
+		<members>Person__c.Phone_Number__c</members>
+		<members>Person__c.Points__c</members>
+		<members>Person__c.Surname__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -48,6 +53,7 @@
 		<members>Order</members>
 		<members>Product2</members>
 		<members>Shelter__c</members>
+		<members>Person__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -55,6 +61,7 @@
 		<members>Animal__c</members>
 		<members>Lost_Animal_Report__c</members>
 		<members>Shelter__c</members>
+		<members>Person__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
@@ -62,6 +69,7 @@
 		<members>Animal__c.All</members>
 		<members>Lost_Animal_Report__c.All</members>
 		<members>Shelter__c.All</members>
+		<members>Person__c.All</members>
 		<name>ListView</name>
 	</types>
 	<types>
@@ -76,6 +84,7 @@
 		<members>Order-Order Layout</members>
 		<members>Product2-Product Layout</members>
 		<members>Shelter__c-Shelter Layout</members>
+		<members>Person__c-Person Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
