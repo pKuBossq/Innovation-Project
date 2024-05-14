@@ -31,10 +31,10 @@
 		<members>Animal__c.Status__c</members>
 		<members>Animal__c.Weight__c</members>
 		<members>Lost_Animal_Report__c.Animal_Type__c</members>
-		<members>Lost_Animal_Report__c.Contact_Information__c</members>
 		<members>Lost_Animal_Report__c.Date_Lost__c</members>
 		<members>Lost_Animal_Report__c.Description__c</members>
 		<members>Lost_Animal_Report__c.Location__c</members>
+		<members>Lost_Animal_Report__c.Person__c</members>
 		<members>Person__c.Email__c</members>
 		<members>Person__c.Name__c</members>
 		<members>Person__c.Phone_Number__c</members>
