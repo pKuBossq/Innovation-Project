@@ -15,5 +15,6 @@
     <tabs>Animal__c</tabs>
     <tabs>Lost_Animal_Report__c</tabs>
     <tabs>Shelter__c</tabs>
+    <tabs>Person__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
