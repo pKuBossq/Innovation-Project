@@ -2,6 +2,9 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Amount_Minimum</fullName>
     <active>true</active>
-    <errorConditionFormula>Amount__c &lt; 10</errorConditionFormula>
+    <errorConditionFormula>AND (
+Amount__c &lt; 10,
+RecordType.DeveloperName = &quot;Virtual&quot;
+)</errorConditionFormula>
     <errorMessage>Amount must be at least 10.</errorMessage>
 </ValidationRule>
