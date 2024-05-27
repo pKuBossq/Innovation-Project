@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>EmailManager</members>
+		<members>HoursController</members>
+		<members>mapController</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -95,6 +97,11 @@
 		<members>Adoption__c.Real</members>
 		<members>Adoption__c.Virtual</members>
 		<name>RecordType</name>
+	</types>
+	<types>
+		<members>openingHours</members>
+		<members>map</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<version>58.0</version>
 </Package>
