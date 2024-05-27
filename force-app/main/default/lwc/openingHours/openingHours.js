@@ -4,15 +4,17 @@ import showHours from '@salesforce/apex/HoursController.showHours';
 export default class OpeningHours extends LightningElement {
     @api recordId;
     hour;
+    weekendHour;
 
-    @wire(showHours, {})
+    @wire(showHours, {shelterId : '$recordId'})
     wiredHours({ error, data }) {
-        console.log("ID record: " + this.recordId);
+        console.log(this.recordId);
         if (data) {
-            console.log("data: " + data);
-            this.hour = data;
+            console.log(data);
+            this.hour = data[0];
+            this.weekendHour = data[1];
         } else if (error) {
-            console.error("Error: " + JSON.stringify(error));
+            console.error(error);
         }
     }
 }
