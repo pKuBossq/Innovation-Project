@@ -32,7 +32,7 @@ jobs:
       - name: 'Populate auth file with SFDX_URL secret of the integration and staging orgs'
         shell: bash
         run: |
-          echo ${{ secrets.SFDX_AUTH_URL}} > ./SFDX_AUTH_URL.txt
+          echo ${{ secrets.SFDX_AUTH_URL }} > ./SFDX_AUTH_URL.txt
 
       # Authenticate to org
       - name: 'Authenticate to Integration Org'
