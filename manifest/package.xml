@@ -3,6 +3,8 @@
 	<types>
 		<members>EmailManager</members>
 		<members>AdoptionTriggerHandler</members>
+		<members>EmailService</members>
+		<members>FreeFoodService</members>
 		<name>ApexClass</name>
 	</types>
 	<types>

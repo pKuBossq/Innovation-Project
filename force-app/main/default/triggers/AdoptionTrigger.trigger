@@ -1,4 +1,4 @@
-trigger AdoptionTriggers on Adoption__c (after insert, after update) {
+trigger AdoptionTrigger on Adoption__c (after insert, after update) {
     if (trigger.isAfter){
         if (trigger.isUpdate){
             AdoptionTriggerHandler.handleAfterUpdate(Trigger.oldMap, Trigger.new);
