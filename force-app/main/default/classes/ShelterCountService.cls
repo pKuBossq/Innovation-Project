@@ -1,5 +1,5 @@
 public with sharing class ShelterCountService {
-      private static void updateShelterCount(List<Adoption__c> adoptions, Boolean isDelete) {
+    public static void updateShelterCount(List<Adoption__c> adoptions, Boolean isDelete) {
         Map<Id, Shelter__c> shelterMap = new Map<Id, Shelter__c>();
 
         for (Adoption__c a : adoptions) {
