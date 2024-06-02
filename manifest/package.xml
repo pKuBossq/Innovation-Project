@@ -5,6 +5,7 @@
 		<members>AdoptionTriggerHandler</members>
 		<members>EmailService</members>
 		<members>FreeFoodService</members>
+		<members>ShelterCountService</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
