@@ -4,7 +4,7 @@ public with sharing class FreeFoodService {
     	List<Person__c> persons = new List<Person__c>();
         Map<Id, RecordType> recordTypes = new Map<Id, RecordType>([SELECT Id, Name FROM RecordType WHERE SObjectType = 'Adoption__c']);
         
-        for(Adoption__c adop : [SELECT RecordType.Name,Person__r.Points__c From Adoption__c where Id IN : Trigger.new])
+        for(Adoption__c adop : [SELECT RecordType.Name,Person__r.Points__c From Adoption__c where Id IN : newList])
         {
             if(adop.RecordTypeId != null)
             {

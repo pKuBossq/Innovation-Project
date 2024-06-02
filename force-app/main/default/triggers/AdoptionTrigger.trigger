@@ -8,7 +8,9 @@ trigger AdoptionTrigger on Adoption__c (after insert, after update) {
         }
     }
 
-    if (trigger.isBefore && trigger.isDelete) {
-        AdoptionTriggerHandler.handleBeforeDelete(Trigger.oldMap);
+    if (trigger.isBefore) {
+        if (trigger.isDelete){
+            AdoptionTriggerHandler.handleBeforeDelete(Trigger.oldMap);
+        }
     }
 }
