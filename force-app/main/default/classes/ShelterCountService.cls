@@ -1,42 +1,34 @@
 public with sharing class ShelterCountService {
     public static void updateShelterCount(List<Adoption__c> adoptions, Boolean isDelete) {
-        Map<Id, Shelter__c> shelterMap = new Map<Id, Shelter__c>();
+        Map<Id, Integer> shelterCountMap = new Map<Id, Integer>();
 
         for (Adoption__c a : adoptions) {
             if (a.Animal__r.Shelter__r != null) {
                 Id shelterId = a.Animal__r.Shelter__r.Id;
-                if(shelterMap.containsKey(shelterId)) {
-                    if(a.Status__c == 'In progress' && a.RecordType.Name == 'Virtual') {
-                        if(isDelete) {
-                            shelterMap.get(shelterId).Number_Of_Unadopted_Virtual_Animals__c--;
-                        } else {
-                            shelterMap.get(shelterId).Number_Of_Unadopted_Virtual_Animals__c++;
-                        }
-                    } else if(a.Status__c == 'Approved' && a.RecordType.Name == 'Virtual') {
-                        if(!isDelete) {
-                            shelterMap.get(shelterId).Number_Of_Unadopted_Virtual_Animals__c--;
-                        }
-                    }
+                Integer countChange = 0;
+
+                if (a.Status__c == 'In progress' && a.RecordType.Name == 'Virtual') {
+                    countChange = isDelete ? -1 : 1;
+                } else if (a.Status__c == 'Approved' && a.RecordType.Name == 'Virtual' && !isDelete) {
+                    countChange = -1;
+                }
+
+                if (shelterCountMap.containsKey(shelterId)) {
+                    shelterCountMap.put(shelterId, shelterCountMap.get(shelterId) + countChange);
                 } else {
-                    Shelter__c shelter = a.Animal__r.Shelter__r;
-                    if(a.Status__c == 'In progress' && a.RecordType.Name == 'Virtual') {
-                        if(isDelete) {
-                            shelter.Number_Of_Unadopted_Virtual_Animals__c--;
-                        } else {
-                            shelter.Number_Of_Unadopted_Virtual_Animals__c++;
-                        }
-                    } else if(a.Status__c == 'Approved' && a.RecordType.Name == 'Virtual') {
-                        if(!isDelete) {
-                            shelter.Number_Of_Unadopted_Virtual_Animals__c--;
-                        }
-                    }
-                    shelterMap.put(shelterId, shelter);
+                    shelterCountMap.put(shelterId, countChange);
                 }
             }
         }
 
-        if (!shelterMap.isEmpty()) {
-            update shelterMap.values();
+        if (!shelterCountMap.isEmpty()) {
+            List<Shelter__c> sheltersToUpdate = new List<Shelter__c>();
+            for (Id shelterId : shelterCountMap.keySet()) {
+                Shelter__c shelter = new Shelter__c(Id = shelterId);
+                shelter.Number_Of_Unadopted_Virtual_Animals__c = shelter.Number_Of_Unadopted_Virtual_Animals__c + shelterCountMap.get(shelterId);
+                sheltersToUpdate.add(shelter);
+            }
+            update sheltersToUpdate;
         }
     }
 }
