@@ -7,4 +7,8 @@ trigger AdoptionTrigger on Adoption__c (after insert, after update) {
             AdoptionTriggerHandler.handleAfterInsert(Trigger.new);
         }
     }
+
+    if (trigger.isBefore && trigger.isDelete) {
+        AdoptionTriggerHandler.handleBeforeDelete(Trigger.oldMap);
+    }
 }
