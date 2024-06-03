@@ -1,6 +1,7 @@
 name: Deploy dev branch to integration org
 
 on:
+  workflow_dispatch:
   push:
     branches: [ dev ]
     paths: [force-app/**]
