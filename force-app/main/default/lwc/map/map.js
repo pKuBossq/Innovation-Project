@@ -7,29 +7,23 @@ export default class Map extends LightningElement {
 
     @wire(getShelter, {shelterId : '$recordId'})
     wiredMap({ error, data }) {
-        console.log(this.recordId);
         if(data) {
-            console.log(data);
             this.mapMarkers = [
                 {
                     location: {
-                        Street: data[0].Street__c,
-                        City: data[0].City__c,
-                        Country: data[0].Country__c,
-                        PostalCode: data[0].PostalCode__c
+                        Street: data.Street__c,
+                        City: data.City__c,
+                        Country: data.Country__c,
+                        PostalCode: data.PostalCode__c
                     },
-                    title: data[0].Name,
+                    title: data.Name,
                     description:
-                        data[0].City__c + ', ul.' + data[0].Street__c + '. Kod pocztowy: ' + data[0].PostalCode__c,
+                        data.City__c + ', ul.' + data.Street__c + '. Kod pocztowy: ' + data.PostalCode__c,
                 },
             ];
         }
         else if(error) {
             console.error(error);
         }
-    }
-    selectedMarkerValue = 'SF1';
-    handleMarkerSelect(event) {
-        this.selectedMarkerValue = event.target.selectedMarkerValue;
     }
 }

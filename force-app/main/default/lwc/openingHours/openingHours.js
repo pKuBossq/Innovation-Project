@@ -8,11 +8,9 @@ export default class OpeningHours extends LightningElement {
 
     @wire(showHours, {shelterId : '$recordId'})
     wiredHours({ error, data }) {
-        console.log(this.recordId);
         if (data) {
-            console.log(data);
-            this.hour = data[0];
-            this.weekendHour = data[1];
+            this.hour = data.Time_Opened__c || 'Unavaliable';
+            this.weekendHour = data.Time_Opened_On_Weekend__c || 'Unavaliable';
         } else if (error) {
             console.error(error);
         }
