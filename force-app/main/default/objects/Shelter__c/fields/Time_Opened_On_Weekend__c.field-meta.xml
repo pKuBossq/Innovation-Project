@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <label>Time_Opened_On_Weekend</label>
     <length>20</length>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>
     <unique>false</unique>
