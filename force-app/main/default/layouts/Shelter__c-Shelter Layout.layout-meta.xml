@@ -11,6 +11,10 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
+<<<<<<< PI-013
+                <behavior>Edit</behavior>
+                <field>Number_Of_Adoptions__c</field>
+=======
                 <behavior>Required</behavior>
                 <field>Time_Opened__c</field>
             </layoutItems>
@@ -33,6 +37,7 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Time_Opened_On_Weekend__c</field>
+>>>>>>> dev
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
