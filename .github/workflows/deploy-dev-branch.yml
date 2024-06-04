@@ -3,7 +3,7 @@ name: "[Deploy] Deploy changes to SF org"
 on:
   push:
     branches:
-      - "develop"
+      - "dev"
     paths:
       - "force-app/**"
   workflow_dispatch:
