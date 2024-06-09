@@ -60,6 +60,7 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
+		<members>SearchAnimal</members>
 		<members>Shelter_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
