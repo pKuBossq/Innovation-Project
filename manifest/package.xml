@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>AnimalClass</members>
 		<members>EmailManager</members>
 		<members>HoursController</members>
 		<members>mapController</members>
@@ -54,6 +55,7 @@
 		<members>Animal__c</members>
 		<members>Lost_Animal_Report__c</members>
 		<members>Person__c</members>
+		<members>SearchAnimal</members>
 		<members>Shelter__c</members>
 		<name>CustomTab</name>
 	</types>
@@ -77,6 +79,7 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>animalCardList</members>
 		<members>map</members>
 		<members>openingHours</members>
 		<name>LightningComponentBundle</name>
