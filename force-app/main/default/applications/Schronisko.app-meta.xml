@@ -34,5 +34,6 @@
     <tabs>Lost_Animal_Report__c</tabs>
     <tabs>Shelter__c</tabs>
     <tabs>Person__c</tabs>
+    <tabs>standard-Case</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
