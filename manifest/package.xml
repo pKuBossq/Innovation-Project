@@ -4,6 +4,7 @@
 		<members>AnimalClass</members>
 		<members>EmailManager</members>
 		<members>HoursController</members>
+		<members>MissingAnimals</members>
 		<members>mapController</members>
 		<name>ApexClass</name>
 	</types>
@@ -82,6 +83,7 @@
 	<types>
 		<members>animalCardList</members>
 		<members>map</members>
+		<members>missingAnimals</members>
 		<members>openingHours</members>
 		<name>LightningComponentBundle</name>
 	</types>
