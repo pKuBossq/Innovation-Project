@@ -1,10 +1,15 @@
 <template>
-    <lightning-card>
-    <lightning-input onchange={handleAmountChange} type="number" name="input" required value="1" label="Podaj liczbę dni od zaginięcia zwierzaka" min = "1" max="800"></lightning-input>
-    <div class="container">
-      <template for:each={mappedData} for:item="entry">
-        <div class="box" key={entry.key}><img src={entry.value} /></div>
-      </template>
-    </div>
-    </lightning-card>
+  <lightning-card>
+      <div class="input-container">
+          <lightning-input class="input-field" onchange={handleInputChange} type="number" name="input" required value="1" label="Podaj liczbę dni od zaginięcia zwierzaka" min="1" max="365"></lightning-input>
+          <lightning-button class="confirm-button" label="Potwierdź" onclick={handleConfirmClick}></lightning-button>
+      </div>
+      <div class="container">
+          <template for:each={mappedData} for:item="entry">
+              <div class="box" key={entry.key}>
+                  <img src={entry.value} class="animal-photo" />
+              </div>
+          </template>
+      </div>
+  </lightning-card>
 </template>

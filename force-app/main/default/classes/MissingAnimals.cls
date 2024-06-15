@@ -19,9 +19,8 @@ public with sharing class MissingAnimals {
         try {
             response = http.send(request);
             Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
-            if (response.getStatusCode() == 200) {
-                return (String) results.get('access_token');
-            } else {
+            if (response.getStatusCode() == 200) { return (String) results.get('access_token'); } 
+            else {
                 System.debug('Error during token retrieval. Status code: ' + response.getStatusCode() + ', response: ' + response.getBody());
                 throw new CalloutException('FAILED TO GET TOKEN: ' + response.getStatusCode() + ' - ' + response.getBody());
             }
@@ -31,29 +30,27 @@ public with sharing class MissingAnimals {
         }
     }
     
-    public static List<String> getAnimalIds(integer day) {
+    public static List<String> getAnimalIds(Integer day) {
         token = getToken();
-        SYstem.debug(token);
-        String endpoint = 'https://cw-inn--inn.sandbox.my.salesforce.com/services/apexrest/MissingAnimals?dayDelta=' + day + '&groupId=G1';
-
+        String endpoint = 'https://cw-inn--inn.sandbox.my.salesforce.com/services/apexrest/MissingAnimals?dayDelta=' + day;
+    
         HttpRequest request = new HttpRequest();
         request.setEndpoint(endpoint);
         request.setMethod('GET');
         request.setHeader('Authorization', 'Bearer ' + token);
-
+    
         Http http = new Http();
         HttpResponse response = http.send(request);
-
+    
         List<String> idList = new List<String>();
-        if(response.getStatusCode() == 200) {
-            String id = response.getBody();
-            id = id.substring(2, id.length() - 2);
-            String clean = id.replaceAll('[\\\\"]', '');
-            idList = clean.split(',');
-        } else {
-            idList.add('Wystąpił błąd: ' + response.getStatusCode());
-        }
-        
+        if (response.getStatusCode() == 200) {
+            String responseBody = response.getBody();
+            if (responseBody.length() > 2) {
+                String id = responseBody.substring(2, responseBody.length() - 2);
+                String clean = id.replaceAll('[\\\\"]', '');
+                idList = clean.split(',');
+            }
+        } else { idList.add('Error occured: ' + response.getStatusCode()); }
         return idList;
     }
 
@@ -75,13 +72,13 @@ public with sharing class MissingAnimals {
     }
 
     @AuraEnabled(Cacheable = true)
-    public static Map<String, String> getAllAnimalPhotos(integer day) {
+    public static Map<String, String> getAllAnimalPhotos(Integer day) {
         Map<String, String> photosMap = new Map<String, String>();
-        for (String Id : getAnimalIds(day)) {
-            System.debug('Id zwierzaka: ' + Id);
+        List<String> animalIds = getAnimalIds(day);
+        for (String Id : animalIds) {
             String photoURL = getAnimalPhotoURL(Id);
             if (photoURL != null) { photosMap.put(Id, photoURL); }
         }
-        return photosMap;
+    return photosMap;
     }
 }
