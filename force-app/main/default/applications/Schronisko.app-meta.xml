@@ -29,6 +29,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Schronisko</label>
     <navType>Standard</navType>
+    <tabs>SearchAnimal</tabs>
     <tabs>Adoption__c</tabs>
     <tabs>Animal__c</tabs>
     <tabs>Lost_Animal_Report__c</tabs>
