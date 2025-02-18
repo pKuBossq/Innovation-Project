@@ -31,8 +31,8 @@ jobs:
           echo ${{ secrets.SFDX_AUTH_URL}} > ./SFDX_AUTH_URL.txt
 
       - name: 'Authenticate to Integration Org'
-        run: sfdx auth:sfdxurl:store -f ./SFDX_AUTH_URL.txt -s -a integration
 
+        run: sfdx auth:sfdxurl:store -f ./SFDX_AUTH_URL.txt -s -a Integration
 
       - name: "Deploy metadata"
         run: sfdx force:source:deploy -p "./force-app"
