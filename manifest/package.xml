@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>AnimalClass</members>
 		<members>EmailManager</members>
 		<members>HoursController</members>
+		<members>MissingAnimals</members>
 		<members>mapController</members>
 		<name>ApexClass</name>
 	</types>
@@ -31,6 +33,8 @@
 		<members>Animal__c.Weight__c</members>
 		<members>Person__c.Phone_Number__c</members>
 		<members>Person__c.Points__c</members>
+		<members>Person__c.Surname__c</members>
+		<members>Shelter__c.Number_Of_Adoptions__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -52,10 +56,12 @@
 		<members>Animal__c</members>
 		<members>Lost_Animal_Report__c</members>
 		<members>Person__c</members>
+		<members>SearchAnimal</members>
 		<members>Shelter__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
+		<members>SearchAnimal</members>
 		<members>Shelter_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
@@ -75,7 +81,9 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>animalCardList</members>
 		<members>map</members>
+		<members>missingAnimals</members>
 		<members>openingHours</members>
 		<name>LightningComponentBundle</name>
 	</types>

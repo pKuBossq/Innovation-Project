@@ -11,7 +11,11 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
+                <field>Number_Of_Adoptions__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Time_Opened__c</field>
             </layoutItems>
             <layoutItems>
@@ -31,7 +35,7 @@
                 <field>Street__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Time_Opened_On_Weekend__c</field>
             </layoutItems>
         </layoutColumns>
